@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Poppins';
+}
+.body-container{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+   
+    height: 580px;
+    width: 600px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;   
+}
+.task_input-container{
+    display: inline-block;
+    height: 60px;
+    width: 100%;
+}
+.task_input-container label{
+    display: block;
+    margin-left: 20px;
+}
+.task_input-container input{
+    display: inline-block;
+   width: 550px;
+   border: none;
+   outline: none;
+   margin-left: 20px;
+}
+h1{
+    text-align: center;
+}
+.date-container{
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+}
+.date-container input{
+    margin-top: 8px ;
+    outline: none;
+    border: none;
+}
+.date-container label{
+    margin-left: 20px; 
+}
+select{
+    outline: none;
+    border: none;
+}
+.buttons{
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+#btn1{
+   
+    height: 40px;
+    width: 100px;
+    color: white;
+    background: black;
+    border: none;
+    margin-right: 5px;
+   
+}
+#btn2{
+    
+    height: 40px;
+    width: 100px;
+    color: white;
+    background: red;
+    border: none;
+}
+.data-container{
+    height: 360px;
+    width: 100%;
+    background: white;
+    display: inline-block;
+    overflow-x: hidden; /* hide horizontal scrollbar */
+  overflow-y: auto; /* enable vertical scrollbar */
+}
+.data-container::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.data{
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    width: 400px;
+    height: 60px;
+}
+
+.checkbox{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    bottom: 10px;
+    height: 20px;
+    width: 40px;
+}
+
+.date-2{
+    display: inline-block;
+    height: 30px;
+    width: 200px;
+    margin: 5px;
+}
+.i-tag{
+    display: inline-block;
+    margin-right: 5px;
+}
+.category{
+    display: inline-flex;
+    height: 35px;
+    width: 90px;
+    background: blue;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.fa-trash{
+    margin-right: 3px;
+}
+.fa-plus{
+    margin-right: 3px;
+}
+.fa-calendar-days{
+    color: darkgrey;
+}

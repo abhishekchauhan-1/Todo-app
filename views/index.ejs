@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/eb5f6e5e2e.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+    <title><%= title %></title>
+    
+</head>
+<body>
+   <div class="body-container">
+    <div class="main-container">
+        <h1>To Do App</h1>
+        <hr>
+        <form action="create-to-do" method="post">
+        <div class="task_input-container">
+            <label for="Description" class="label">Description</label>
+            <input type="text" id="name-area" name="task" placeholder="What you need To do?">
+        </div>
+            <hr>
+        <div class="date-container">
+            <label for="select">Choose a Category</label>
+            <select name="category" id="select-box" aria-placeholder="Category">
+                <option value="">None</option>
+                <option value="SCHOOL">SCHOOL</option>
+                <option value="WORK">WORK</option>
+                <option value="HOME">HOME</option>
+                <option value="OTHER">OTHER</option>
+            </select>
+            <label for="date">Select Date</label>
+            <input type="date" name="date" id="date-item" />
+        </div>
+        <hr>
+        <div class="buttons">
+           
+            <button  type="submit" id="btn1"><i class="fa-solid fa-plus icons"></i>Add Task</button>
+
+            </form>
+
+            <form action="/delete-tasks" method="post">
+            <button type="submit" id="btn2"><i class="fa-solid fa-trash icons"></i>Delete</button>
+      
+       </div>
+       <hr>
+   <div class="data-container">
+        <ul>
+            <% for(let i of task_s) {%>
+            <li>
+                
+                <div class="checkbox">
+                    <input type="checkbox" id="<%=i.task%>" name="id" value="<%=i._id%>">
+                </div>
+                    <div class="data">
+                       <div class="task-list"><p><%= i.task %></p></div>
+                       <div class="i-tag"><i class="fa-solid fa-calendar-days"></i></div>
+                       <div class="date-2" > <p><%= i.date%></p></div>
+                       
+                    </div>
+                    
+                        <div class="category"><%= i.category%></div>
+                    
+               
+                    
+      
+            </li>
+            <% } %>
+        </form>
+        </ul>
+    </div>
+    </div>
+</div>
+    
+</body>
+</html>
